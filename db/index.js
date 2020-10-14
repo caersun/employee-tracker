@@ -1,4 +1,4 @@
-const connection = require("connections"); // does it need to be "connection.js"? check this
+const connection = require("connection"); // does it need to be "connection.js"? check this
 
 class DB { // do i need this?
     constructor(department, role, employee) {

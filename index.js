@@ -3,7 +3,7 @@ switch case depending on user input
 call methods db index.js i.e. db.addDepartment() */
 
 const inquirer = require("inquirer");
-const connection = require("./db/connections");
+const connection = require("./db/connection");
 const db = require("./db/index"); // calling database that contains Department, Role, and Employee classes with CRUD methods
 
 // Connecting to MySQL server and calling mainPrompt()
