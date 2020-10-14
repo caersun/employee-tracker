@@ -1,4 +1,6 @@
-const connection = require("connection"); // does it need to be "connection.js"? check this
+const connection = require("connection"); 
+const inquirer = require("inquirer");
+const cTable = require("console.table");
 
 class DB { // do i need this?
     constructor(department, role, employee) {
@@ -20,7 +22,18 @@ class Department { // come back to this
     addDepartment() {};
 
     // Read
-    viewDepartments() {};
+    viewDepartments() {
+        const query = "SELECT * FROM department";
+
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+
+            const table = cTable.getTable(res);
+            console.log(table);
+
+            // need a way to get back to start screen? can be done in ../index.js??
+        })
+    };
 
     // Update
     updateDepartment() {};

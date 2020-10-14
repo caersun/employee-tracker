@@ -39,39 +39,51 @@ function onMainPromptAnswer({ action }) {
     switch (action) {
         case "View all departments":
             db.Department.viewDepartments();
+            mainPrompt();
             break;
         case "View all roles":
             db.Role.viewRoles();
+            mainPrompt();
             break;
         case "View all employees":
             db.Employee.viewEmployees();
+            mainPrompt();
             break;
         case "View all employees by department":
             db.Employee.viewByDept();
+            mainPrompt();
             break;
         case "View all employees by role":
             db.Employee.viewByRole();
+            mainPrompt();
             break;
         case "View all employees by manager":
             db.Employee.viewByMan();
+            mainPrompt();
             break;
         case "Add department":
             db.Department.addDepartment();
+            mainPrompt();
             break;
         case "Add role":
             db.Role.addRole();
+            mainPrompt();
             break;
         case "Add employee":
             db.Employee.addEmployee();
+            mainPrompt();
             break;
         case "Remove employee":
             db.Employee.deleteEmployee();
+            mainPrompt();
             break;
         case "Update employee role":
             db.Employee.updateRole();
+            mainPrompt();
             break;
         case "Update employee manager":
             db.Employee.updateManager();
+            mainPrompt();
             break;
         case "exit":
         default:
