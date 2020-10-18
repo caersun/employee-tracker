@@ -1,6 +1,6 @@
 // Import our dependencies
 const mysql = require("mysql");
-// const util = require("util"); // what is this doing??
+// const util = require("util"); // if we want to make asynchronous come back and enable and add logic
 
 // Create/configure our MySQL connection
 const connection = mysql.createConnection({
@@ -8,18 +8,7 @@ const connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "$qlN1ght!",
-  database: "employee-tracker_db" // come back and change names to all (in sql)
+  database: "employee_tracker_db" // come back and change names to all (in sql)
 });
-
-// Connect to the MySQL server
-// Is it necessary to do this here? Exporting in ../index.js and connecting to server there
-/*
-connection.connect(err => {
-  if (err) {
-    throw err;
-  } 
-});
-
-connection.query = util.promisify(connection.query); */
 
 module.exports = connection;
